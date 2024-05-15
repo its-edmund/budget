@@ -17,6 +17,9 @@
 		00B95E2B2BF17533004C8547 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B95E2A2BF17533004C8547 /* LineGraphView.swift */; };
 		00D0BBC02BF184FB0011645A /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = 00D0BBBF2BF184FB0011645A /* .swiftformat */; };
 		00D0BBC22BF187E60011645A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0BBC12BF187E60011645A /* DashboardView.swift */; };
+		2B5140DF2BF4204D004710F4 /* NetWorthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5140DE2BF4204D004710F4 /* NetWorthModel.swift */; };
+		2B5140E22BF43079004710F4 /* NetWorthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5140E12BF43079004710F4 /* NetWorthView.swift */; };
+		2B5140E52BF4328E004710F4 /* NetWorthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5140E42BF4328E004710F4 /* NetWorthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		00B95E2A2BF17533004C8547 /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
 		00D0BBBF2BF184FB0011645A /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftformat; sourceTree = "<group>"; };
 		00D0BBC12BF187E60011645A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2B5140DE2BF4204D004710F4 /* NetWorthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthModel.swift; sourceTree = "<group>"; };
+		2B5140E12BF43079004710F4 /* NetWorthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetWorthView.swift; path = budget/Models/NetWorthView.swift; sourceTree = SOURCE_ROOT; };
+		2B5140E42BF4328E004710F4 /* NetWorthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		00B95DFC2BF16D33004C8547 /* budget */ = {
 			isa = PBXGroup;
 			children = (
+				2B5140E32BF4323B004710F4 /* ViewModel */,
+				2B5140DD2BF41385004710F4 /* Models */,
 				00B95E272BF174F4004C8547 /* Views */,
 				00B95DFD2BF16D33004C8547 /* budgetApp.swift */,
 				00B95E012BF16D34004C8547 /* Assets.xcassets */,
@@ -137,11 +145,28 @@
 		00B95E272BF174F4004C8547 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B5140E12BF43079004710F4 /* NetWorthView.swift */,
 				00B95DFF2BF16D33004C8547 /* ContentView.swift */,
 				00B95E2A2BF17533004C8547 /* LineGraphView.swift */,
 				00D0BBC12BF187E60011645A /* DashboardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2B5140DD2BF41385004710F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B5140DE2BF4204D004710F4 /* NetWorthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B5140E32BF4323B004710F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B5140E42BF4328E004710F4 /* NetWorthViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5140DF2BF4204D004710F4 /* NetWorthModel.swift in Sources */,
 				00B95E002BF16D33004C8547 /* ContentView.swift in Sources */,
 				00D0BBC22BF187E60011645A /* DashboardView.swift in Sources */,
+				2B5140E22BF43079004710F4 /* NetWorthView.swift in Sources */,
 				00B95DFE2BF16D33004C8547 /* budgetApp.swift in Sources */,
 				00B95E2B2BF17533004C8547 /* LineGraphView.swift in Sources */,
+				2B5140E52BF4328E004710F4 /* NetWorthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"budget/Preview Content\"";
+				DEVELOPMENT_TEAM = BFBPCYVSHZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"budget/Preview Content\"";
+				DEVELOPMENT_TEAM = BFBPCYVSHZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

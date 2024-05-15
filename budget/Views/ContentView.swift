@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        let financialModel = NetWorthModel()
+        let viewModel = NetWorthViewModel(model: financialModel)
+        
+        return NetWorthView(netWorthViewModel: viewModel)
     }
 }
 

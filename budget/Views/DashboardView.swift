@@ -9,10 +9,10 @@ import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        VStack {
-            LineGraphView(dataPoints: [10, 20, 50, 20])
-        }
-        .padding()
+        let financialModel = NetWorthModel()
+        let viewModel = NetWorthViewModel(model: financialModel)
+        
+        return NetWorthView(netWorthViewModel: viewModel)
     }
 }
 
