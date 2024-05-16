@@ -7,38 +7,27 @@
 
 import Foundation
 
-struct FinancialData {
+struct TransactionData {
     var date: Date
-    var netWorth: Double
+    var amount: Double
 }
 
 class NetWorthModel {
-    let sampleFinancialData: [FinancialData] = [
-        FinancialData(date: Date().addingTimeInterval(-86400 * 30), netWorth: 10000), // 30 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 29), netWorth: 1000), // 29 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 28), netWorth: 120), // 28 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 27), netWorth: 6700), // 27 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 26), netWorth: 3200), // 26 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 25), netWorth: -10300), // 25 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 24), netWorth: -33100), // 24 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 23), netWorth: 10400), // 23 days ago
-        FinancialData(date: Date().addingTimeInterval(-86400 * 22), netWorth: 10700), // 22 days ago
-        FinancialData(date: Date(), netWorth: 14200)                                  // Today
+    let sampleTransactionData: [TransactionData] = [
+        TransactionData(date: Date().addingTimeInterval(-86400 * 6), amount: 10000),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 6), amount: 1000),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 4), amount: -11000),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 4), amount: 6700),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 3), amount: 3200),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 1), amount: -10300),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 1), amount: -33100),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 1), amount: 10400),
+        TransactionData(date: Date().addingTimeInterval(-86400 * 1), amount: 10700),
+        TransactionData(date: Date(), amount: 14200)                                  // Today
     ]
     
-    func getNetWorthData() -> [FinancialData] {
-        return sampleFinancialData
+    func getNetWorthData() -> [TransactionData] {
+        return sampleTransactionData
     }
     
-    func calculateAccumulatedNetWorth() -> [FinancialData] {
-          var accumulatedEntries: [FinancialData] = []
-          var totalNetWorth: Double = 0
-
-        for (index, entry) in sampleFinancialData.enumerated() {
-              totalNetWorth += entry.netWorth
-              accumulatedEntries.append(FinancialData(date: entry.date, netWorth: totalNetWorth))
-          }
-
-          return accumulatedEntries
-      }
 }
